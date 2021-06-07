@@ -1,0 +1,138 @@
+$titleBlack: rgb(20, 20, 20);
+$orange: #FFC03F;
+$title: #C6A965;
+
+#title {
+    overflow: hidden;
+    .title__container {
+        display: grid;
+        min-height: 100vh;
+        color: white;
+        .box1 {
+            grid-area: first;
+            background-image: url('./title.jpg');
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            overflow: hidden;
+            border-bottom: 1px solid white;
+            position: relative;
+            .box1__text{
+                color: white;
+                bottom: 13rem;
+                position: absolute;
+                left: 8rem;
+                bottom: 10rem;
+                .box1__title {
+                    font-size: 6.75rem;
+                    font-family: 'Heebo', sans-serif;
+                    font-weight: 800;
+                    span {
+                        color: $title;
+                    }
+                }
+                .box1__btn {
+                    border: 2px solid $title;
+                    // border-radius: 3rem;
+                    width: 60%;
+                    font-size: 1.25rem;
+                    font-family: 'Mukta', sans-serif;
+                    height: 2.5rem;
+                    line-height: 2.5rem;
+                    overflow: hidden;
+                    z-index: 1;
+                    cursor: pointer;
+                    position: relative;
+                    text-align: center;
+                    padding-right: 2rem;
+                    padding-left: 2rem;
+                    margin-top: 5rem;
+                    a {
+                        color: white;
+                        text-decoration: none;
+                    }
+                    .box1__btn__hover {
+                        width: 100%;
+                        height: 100%;
+                        background-color: $title;
+                        border: 2px solid $title;
+                        top: 0;
+                        left: 0;
+                        transform: translateX(-100%);
+                        z-index: -1;
+                        position: absolute;
+                    }
+                }
+            }
+        }
+        .box2 {
+            grid-area: second;
+            background-color: $titleBlack;
+            border-left: 1px solid white;
+            border-right: 1px solid white;
+            position: relative;
+            border-bottom: 1px solid white;
+            overflow: hidden;
+            .box2__text {
+                bottom: 2rem;
+                left: 2rem;
+                font-size: 2rem;
+                font-family: 'Rubik', sans-serif;
+                z-index: 1;
+                position: absolute;
+                a{
+                    color: white;
+                    text-decoration: none;
+                }
+                .box2__text__arrow{
+                    font-size: 2rem;
+                }
+            }
+            .box2__yellowDiv {
+                background-color: $orange;;
+                bottom:-50%;
+                left:-40%;
+                transform: rotate(35deg) translateY(100%);
+                height: 100%;
+                position: absolute;
+                width: 130%;
+            }
+        }
+        .box3 {
+            grid-area: third;
+            background-color: $titleBlack;
+            border-left: 1px solid white;
+            border-right: 1px solid white;
+            border-bottom: 1px solid white;
+            position: relative;
+            overflow: hidden;
+            .box3__text {
+                bottom: 2rem;
+                left: 2rem;
+                font-size: 2rem;
+                font-family: 'Rubik', sans-serif;
+                z-index: 1;
+                position: absolute;
+                a{
+                    color: white;
+                    text-decoration: none;
+                }
+                .box3__text__arrow{
+                    font-size: 2rem;
+                }
+            }
+            .box3__yellowDiv {
+                background-color: $orange;
+                bottom:-50%;
+                left:-40%;
+                transform: rotate(35deg) translateY(100%);
+                height: 100%;
+                position: absolute;
+                width: 130%;
+            }
+        }
+        grid-template-areas:
+        'first first second'
+        'first first third';
+    }
+}

@@ -1,0 +1,55 @@
+$orange: #FFC03F;
+$grey: rgb(51, 50, 50);
+
+#workWithUs {
+    padding: 15rem 20rem 10rem 20rem;
+    text-align: center;
+    .workWithUs__title {
+        font-family: 'Cabin', sans-serif;
+        font-size: 9rem;
+        font-weight: 700;
+    }
+    .workWithUs__subtitle {
+        font-size: 1.15rem;
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+        font-family: 'Prompt', sans-serif;
+    }
+    .work {
+        display: grid;
+        text-align: left;
+        width: 100%;
+        margin: 5rem 0;
+        .work__first {
+            grid-area: first;
+            .work__subtitle {
+                color: $orange;
+                font-family: 'Rubik', sans-serif;
+                font-size: 1.25rem;
+            }
+            .work__title {
+                font-size: 3rem;
+                padding-bottom: 2rem;
+                font-family: 'Mukta', sans-serif;
+            }
+            .work__btn {
+                a {
+                    text-transform: uppercase;
+                    color: $grey;
+                    font-family: 'Rubik', sans-serif;
+                    font-size: 1.25rem;
+                    margin-top: 1rem;
+                }
+            }
+        }
+        .work__second {
+            grid-area: second;
+            margin: auto;
+            img {
+                width: 300px;
+            }
+        }
+        grid-template-areas: 'first second';
+        grid-template-columns: 50% 50%;
+    }
+}

@@ -1,0 +1,89 @@
+$span: #C6A965;
+$orange: #e9c47c;
+$grey: rgb(223, 215, 215);
+
+#whatWeDo {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 10rem 15rem 10rem 15rem;
+    .whatWeDo__title {
+        font-size: 7rem;
+        font-family: 'Cabin', sans-serif;
+        font-weight: 700;
+        span {
+            color: $span;
+        }
+    }
+    .whatWeDo__subtitle {
+        font-family: 'Prompt', sans-serif;
+        padding-top: 3rem;
+        font-size: 1.1rem;
+        padding-bottom: 7rem;
+    }
+    .whatWeDo__container {
+        margin: auto;
+        display: grid;
+        grid-template-areas: 'first second third fourth';
+        grid-template-columns: 25% 25% 25% 25%;
+        grid-gap: 2rem;
+        .card:nth-child(1){
+            grid-area: first;
+        }
+        .card:nth-child(2){
+            grid-area: second;
+        }
+        .card:nth-child(3){
+            grid-area: third;
+        }
+        .card:nth-child(4){
+            grid-area: fourth;
+        }
+        .card {
+            text-align: left;
+            position: relative;
+            padding: 2rem;
+            background: rgb(24, 23, 23);
+            border: 0.05px solid transparent;
+            .card__subtitle {
+                color: $orange;
+                font-family: 'Signika Negative', sans-serif;
+                font-size: 1.25rem;
+            }
+            .card__title {
+                font-size: 3rem;
+                font-family: 'Noto Sans', sans-serif;
+                padding-bottom: 1.5rem;
+                color: $grey;
+            }
+            .card__btn {
+                position: relative;
+                margin-top: 2rem;
+                width: fit-content;
+                border: 1px solid white;
+                padding: 0.3rem 0.7rem;
+                font-family: 'Prompt', sans-serif;
+                z-index: 1;
+                cursor: pointer;
+                overflow: hidden;
+                &:hover {
+                    border: 1px solid white;
+                    outline: none;
+                }
+                .card__btn__text {
+                    z-index: 9;
+                }
+                .card__btn__hover {
+                    position: absolute;
+                    background-color: white;
+                    width: 100%;
+                    height: 100%;
+                    left: 0;
+                    top: 0;
+                    z-index: -1;
+                    transform: translateY(100%);
+                }
+            }
+        }
+    }
+}

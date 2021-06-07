@@ -1,0 +1,42 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Cairo', sans-serif;
+}
+
+body {
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+section {
+    width: 95vw !important;
+    height: fit-content;
+}
+
+// title
+@import url('https://fonts.googleapis.com/css2?family=Heebo&display=swap');
+// subtitle
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@300&display=swap');
+// title - boxes
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+// sections - titles
+@import url('https://fonts.googleapis.com/css2?family=Cabin&display=swap');
+// normal text
+@import url('https://fonts.googleapis.com/css2?family=Cairo&display=swap');
+// subtitles
+@import url('https://fonts.googleapis.com/css2?family=Prompt&display=swap');
+// small subtitles
+@import url('https://fonts.googleapis.com/css2?family=Signika+Negative&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Londrina+Outline&display=swap');
+
+@import './components/logo/logo.scss';
+@import './components/fixedDiv/FixedDiv.scss';
+@import './components/title/title.scss';
+@import './components/aboutUs/aboutUs.scss';
+@import './components/whatWeDo/whatWeDo.scss';
+@import './components//workWithUs/workWithUs.scss';
+@import './components/menu/menu.scss';

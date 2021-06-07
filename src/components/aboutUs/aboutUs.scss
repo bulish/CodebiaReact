@@ -1,0 +1,140 @@
+$orange: #FFC03F;
+
+#aboutUs{
+    padding: 15rem 20rem 10rem 20rem;
+    min-height: fit-content !important;
+    .aboutUs__container {
+        display: grid;
+        .aboutUs__container__left {
+            grid-area: first;
+            width: 100%;
+            .aboutUs__title {
+                font-family: 'Cabin', sans-serif;
+                font-size: 9rem;
+                font-weight: 700;
+                z-index: 8;
+            }
+            .aboutUs__container__subtitle {
+                color: $orange;
+                font-size: 1.75rem;
+                padding-top: 3rem;
+                padding-bottom: 3rem;
+                font-family: 'Prompt', sans-serif;
+            }
+            .aboutUs__container__left__text {
+                padding-right: 10rem;
+            }
+            .aboutUs__container__btn {
+                margin-top: 4rem;
+                position: relative;
+                width: fit-content;
+                a {
+                    color: black;
+                    text-decoration: none;
+                    font-family: 'Prompt', sans-serif;
+                    text-transform: uppercase;
+                    padding: 1rem;
+                }
+                .aboutUs__container__btn__div {
+                    height: 100%;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 50%;
+                    background-color: $orange;
+                    z-index: -1;
+                }
+            }
+        }
+        .aboutUs__container__right {
+            grid-area: second;
+            position: relative;
+            left: -5rem;
+            z-index: -5;
+            width: 150%;
+            img{
+                width: 100%;
+            }
+        }
+        grid-template-areas:
+        'first second'
+        'first second';
+    }
+    .aboutUs__works {
+        display: grid;
+        grid-gap: 3rem;
+        min-height: 80vh;
+        width: 100vw;
+        padding: 10rem 20rem;
+        position: relative;
+        left: -20rem;
+        .aboutUs__works__first {
+            grid-area: first;
+            width: 100%;
+            height: 100%;
+            background-image: url('./aboutUs2.jpeg');
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+            overflow: hidden;
+            .aboutUs__works__first__div {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                background-color: $orange;
+                opacity: 0.85;
+                transform: translateX(-100%);
+             }
+            .aboutUs__works__first__text {
+                position: absolute;
+                right: 1rem;
+                bottom: 1rem;
+                text-align: right;
+                transform: translateY(150%);
+                p {
+                    font-size: 1.5rem;
+                }
+                a {
+                    color: black;
+                    text-decoration: none;
+                }
+            }
+        }
+        .aboutUs__works__second {
+            grid-area: second;
+            width: 100%;
+            height: 100%;
+            background-image: url('./aboutUs3.jpeg');
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+            overflow: hidden;
+            .aboutUs__works__second__div {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                background-color: $orange;
+                opacity: 0.85;
+                transform: translateX(-100%);
+             }
+            .aboutUs__works__second__text {
+                position: absolute;
+                right: 1rem;
+                bottom: 1rem;
+                text-align: right;
+                transform: translateY(150%);
+                p {
+                    font-size: 1.5rem;
+                }
+                a {
+                    color: black;
+                    text-decoration: none;
+                }
+            }
+        }
+        grid-template-areas:
+        'first second'
+    }
+}

@@ -74,7 +74,7 @@ $orange: #FFC03F;
         left: -20rem;
         .aboutUs__works__first {
             grid-area: first;
-            width: 100%;
+            width: 35vw;
             height: 100%;
             background-image: url('./aboutUs2.jpeg');
             background-position: center center;
@@ -107,7 +107,7 @@ $orange: #FFC03F;
         }
         .aboutUs__works__second {
             grid-area: second;
-            width: 100%;
+            width: 35vw;
             height: 100%;
             background-image: url('./aboutUs3.jpeg');
             background-position: center center;
@@ -139,6 +139,70 @@ $orange: #FFC03F;
             }
         }
         grid-template-areas:
-        'first second'
+        'first second' 'first second'
+    }
+}
+
+@media screen and (max-width: 1700px) {
+    #aboutUs {
+        padding: 15rem 10rem !important;
+    }
+}
+
+
+@media screen and (max-width: 1450px) {
+    #aboutUs {
+        padding: 15rem 7rem 7rem 7rem !important;
+        img {
+            width: 350px !important;
+            height: 480px !important;
+            padding-top: 12rem;
+        }
+    }
+}
+
+@media screen and (max-width: 1250px) {
+    .aboutUs__works {
+        grid-template-areas: 'first first' 'second second' !important;
+        .aboutUs__works__first {
+            width: 600px !important;
+            height: 500px !important;
+        }
+        .aboutUs__works__second {
+            width: 600px !important;
+            height: 500px !important;
+        }
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    #aboutUs {
+        padding-top: 2rem !important;
+        .aboutUs__container {
+            grid-template-areas:
+            'first first'
+            'second second' !important;
+            .aboutUs__container__right{
+                left: 0 !important;
+            }
+        .aboutUs__container__left{
+            width: 100% !important;
+            .aboutUs__container__left__text {
+                padding: 0 !important;
+            }
+            .aboutUs__title {
+                font-size: 6rem !important;
+            }
+        }
+    }
+    }
+}
+
+@media screen and (max-width: 697px) {
+    #aboutUs {
+        padding: 2rem 3rem !important;
+        .aboutUs__title {
+            font-size: 4rem !important;
+     }
     }
 }

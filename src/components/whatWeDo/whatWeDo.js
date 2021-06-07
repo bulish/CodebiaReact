@@ -1,11 +1,11 @@
 import React from 'react';
 import WhatWeDoCard from './whatWeDoCard';
 
-function WhatWeDo({cards, setCards, card}) {
+function WhatWeDo({cards, setCards}) {
 
 	return (
 		<section id="whatWeDo">
-			<div className="whatWeDo__title"><span>What</span> we <span>do</span></div>
+			<div className="whatWeDo__title">What <span>we</span> do</div>
 			<div className="whatWeDo__subtitle">
 				Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nemo enim
 				ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed

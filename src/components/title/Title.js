@@ -70,14 +70,14 @@ function Title(){
 							<span>CODE</span> WITH US <br /> IN <span>CODEBIA</span>
 						</div>
 						<div className="box1__btn" onMouseEnter={mouseEnterBtn} onMouseLeave={mouseLeaveBtn}>
-							<a href="#">MORE INFO</a>
+							<a href="#aboutUs">MORE INFO</a>
 							<div className="box1__btn__hover"></div>
 						</div>
 					</div>
 				</div>
 				<div className="box2" onMouseEnter={mouseEnterBox2} onMouseLeave={mouseLeaveBox2}>
 					<div className="box2__text">
-						<a href="#">
+						<a href="#aboutUs">
 							About Us <div className="box2__text__arrow">&rarr;</div>
 						</a>
 					</div>
@@ -85,7 +85,7 @@ function Title(){
 				</div>
 				<div className="box3"  onMouseEnter={mouseEnterBox3} onMouseLeave={mouseLeaveBox3}>
 					<div className="box3__text">
-						<a href="#">
+						<a href="#text">
 							Contact <div className="box3__text__arrow">&rarr;</div>
 						</a>
 					</div>

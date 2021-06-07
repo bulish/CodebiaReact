@@ -1,11 +1,10 @@
 import React from 'react';
-import WorkWithUsWorks from './workWithUsWorks';;
 
-function WorkWithUs({ works, setWorks, work }) {
+function WorkWithUs() {
 	return (
 		<section id="workWithUs">
 			<div className="workWithUs__title">
-				<span>Work</span> with <span>us</span>
+				Work <span>with</span> us
 			</div>
 			<div className="workWithUs__subtitle">
 				Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nemo enim
@@ -13,16 +12,63 @@ function WorkWithUs({ works, setWorks, work }) {
 				quia consequuntur magni dolores eos qui ratione voluptatem sequi
 				nesciunt.
 			</div>
-			<div className="workWithUs__container">
-				{works.map(work => (
-					<WorkWithUsWorks
-						key={work.id}
-						id={work.id}
-						works={works}
-						work={work}
-						setWorks={setWorks}
-					/>
-				))}
+			<div className="workWithUs__works">
+				<div className="works__first">
+					<div className="position">
+						Website Design <span>+</span>
+					</div>
+					<div className="position">
+						UI/UX Design <span>+</span>
+					</div>
+					<div className="position">
+						Website Development <span>+</span>
+					</div>
+					<div className="position">
+						Insights &amp; Analytics <span>+</span>
+					</div>
+					<div className="position">
+						Research &amp; Discovery
+						<span>+</span>
+					</div>
+					<div className="position">
+						Marketing Materials
+						<span>+</span>
+					</div>
+					<div className="position">
+						Competitive Analysis
+						<span>+</span>
+					</div>
+				</div>
+				<div className="works__second">
+					<div className="position">
+						Responsive Web Design
+						<span>+</span>
+					</div>
+					<div className="position">
+						Content Management
+						<span>+</span>
+					</div>
+					<div className="position">
+						Corporate Identity
+						<span>+</span>
+					</div>
+					<div className="position">
+						Motion Graphics
+						<span>+</span>
+					</div>
+					<div className="position">
+						Content Strategy
+						<span>+</span>
+					</div>
+					<div className="position">
+						Presentations
+						<span>+</span>
+					</div>
+					<div className="position">
+						SEO Services
+						<span>+</span>
+					</div>
+				</div>
 			</div>
 		</section>
 	);

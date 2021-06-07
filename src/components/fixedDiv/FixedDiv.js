@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import gsap from 'gsap';
-import { TimelineMax } from 'gsap';
 
 function FixedDiv({ menuFunction }) {
 	// arrow

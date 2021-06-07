@@ -1,55 +1,52 @@
-$orange: #FFC03F;
-$grey: rgb(51, 50, 50);
+$orange: #e7b34b;
 
 #workWithUs {
     padding: 15rem 20rem 10rem 20rem;
-    text-align: center;
+    display: grid;
     .workWithUs__title {
         font-family: 'Cabin', sans-serif;
         font-size: 9rem;
         font-weight: 700;
+        z-index: 8;
+        span {
+            color: $orange;
+        }
     }
-    .workWithUs__subtitle {
-        font-size: 1.15rem;
+    .workWithUs__subtitle{
+        font-size: 1.75rem;
         padding-top: 3rem;
         padding-bottom: 3rem;
         font-family: 'Prompt', sans-serif;
     }
-    .work {
+    .workWithUs__works {
         display: grid;
-        text-align: left;
+        grid-template-columns: 50% 50%;
+        grid-template-areas: 'first second';
+        padding-top: 5rem;
         width: 100%;
-        margin: 5rem 0;
-        .work__first {
-            grid-area: first;
-            .work__subtitle {
-                color: $orange;
-                font-family: 'Rubik', sans-serif;
+        .position {
+            position: relative;
+            width: 40%;
+            font-size: 1.15rem;
+            font-family: 'Heebo', sans-serif;
+            line-height: 1.85rem;
+            span {
+                color: rgb(175, 22, 22);
                 font-size: 1.25rem;
-            }
-            .work__title {
-                font-size: 3rem;
-                padding-bottom: 2rem;
-                font-family: 'Mukta', sans-serif;
-            }
-            .work__btn {
-                a {
-                    text-transform: uppercase;
-                    color: $grey;
-                    font-family: 'Rubik', sans-serif;
-                    font-size: 1.25rem;
-                    margin-top: 1rem;
+                position: absolute;
+                right: 0;
+                top: -25%;
+                cursor: pointer;
+                &:hover {
+                    font-weight: 800;
                 }
             }
         }
-        .work__second {
-            grid-area: second;
-            margin: auto;
-            img {
-                width: 300px;
-            }
+        .works__first {
+            grid-area: first;
         }
-        grid-template-areas: 'first second';
-        grid-template-columns: 50% 50%;
+        .works__second {
+            grid-area: second;
+        }
     }
 }

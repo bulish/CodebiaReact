@@ -3,20 +3,18 @@ import gsap from 'gsap';
 
 import Menu from './components/menu/menu';
 import Title from './components/title/Title';
-import Logo from './components/logo/Logo';
 import FixedDiv from './components/fixedDiv/FixedDiv';
 import AboutUs from './components/aboutUs/aboutUs';
 import WhatWeDo from './components/whatWeDo/whatWeDo';
 import WorkWithUs from './components/workWithUs/workWithUs';
+import Text from './components/text/text';
 
 import './main.scss';
 
 import data from './data';
-import data2 from './data2';
 
 function App() {
 	const [cards, setCards] = useState(data());
-	const [works, setWorks] = useState(data2());
 	const [menuStatus, setMenuStatus] = useState(false);
 	const [menu, setMenu] = useState(false);
 	const menuFunction = () => {
@@ -43,12 +41,12 @@ function App() {
 	return (
 		<div className="App">
 			<Menu menuFunction={menuFunction}/>
-			<Logo />
 			<FixedDiv menuStatus={menuStatus} setMenuStatus={setMenuStatus} menuFunction={menuFunction}/>
 			<Title />
 			<AboutUs />
 			<WhatWeDo cards={cards} setCards={setCards} />
-			<WorkWithUs works={works} setWorks={setWorks} />
+			<WorkWithUs />
+			<Text />
 		</div>
 	);
 }

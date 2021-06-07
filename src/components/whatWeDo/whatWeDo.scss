@@ -1,5 +1,5 @@
-$span: #C6A965;
-$orange: #e9c47c;
+$span: #eeab24;
+$orange: #FFC03F;
 $grey: rgb(223, 215, 215);
 
 #whatWeDo {
@@ -16,10 +16,11 @@ $grey: rgb(223, 215, 215);
         }
     }
     .whatWeDo__subtitle {
-        font-family: 'Prompt', sans-serif;
+        font-size: 1.25rem;
         padding-top: 3rem;
-        font-size: 1.1rem;
-        padding-bottom: 7rem;
+        padding-bottom: 6rem;
+        font-family: 'Prompt', sans-serif;
+        line-height: 2.75rem;
     }
     .whatWeDo__container {
         margin: auto;
@@ -56,22 +57,22 @@ $grey: rgb(223, 215, 215);
                 padding-bottom: 1.5rem;
                 color: $grey;
             }
+            .card__text {
+                font-family: 'Prompt', sans-serif;
+                line-height: 1.5rem;
+            }
             .card__btn {
                 position: relative;
                 margin-top: 2rem;
                 width: fit-content;
-                border: 1px solid white;
                 padding: 0.3rem 0.7rem;
                 font-family: 'Prompt', sans-serif;
                 z-index: 1;
                 cursor: pointer;
                 overflow: hidden;
+                text-transform: uppercase;
                 &:hover {
-                    border: 1px solid white;
-                    outline: none;
-                }
-                .card__btn__text {
-                    z-index: 9;
+                    color: rgb(167, 161, 161);
                 }
                 .card__btn__hover {
                     position: absolute;

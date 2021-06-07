@@ -4,6 +4,7 @@ import gsap from 'gsap';
 
 function AboutUs() {
 
+	
 	const mouseEnterBtn = () => {
 		gsap.to('.aboutUs__container__btn__div', { x: '100%' });
 	}

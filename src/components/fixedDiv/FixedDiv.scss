@@ -67,6 +67,12 @@ $titleBlack: rgb(20, 20, 20);
 
 @media screen and (max-width: 700px) {
     .fixed__div {
-        width: 15vw !important;
+        width: 0 !important;
+        .arrow {
+            display: none !important;
+        }
+    }
+    .fixed__div__menu {
+        right: 1rem !important;
     }
 }

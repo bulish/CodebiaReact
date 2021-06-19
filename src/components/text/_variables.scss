@@ -1,0 +1,21 @@
+// colors
+$orange: #FFC03F;
+
+// padding
+$text__paddingTop: clamp(3rem, 20vh, 30rem);
+$text__paddingBottom: calc(20vh - 2.5rem);
+$text__paddingX: calc(13vw - 4.5rem);
+$subtitle__paddingX: calc(1vw + 0.5rem);
+$subtitle__paddingTop: calc(3vh + 1rem);
+$subtitle__paddingBottom: calc(6vh + 1rem);
+$title__paddingX: calc(3vw + 0.5rem);
+$title__paddingTop: calc(3vh + 1rem);
+$title__paddingBottom: calc(6vh + 1rem);
+$contact__paddingY: calc(1vh + 1rem);
+$contact__paddingX: calc(1vh + 1rem);
+
+// font-size
+$title__fontSize: clamp(1.8rem, 3vw, 6.5rem);
+$subtitle__fontSize: clamp(1.1rem, 1.1vw, 3rem);
+$contact__fontSize: clamp(1rem, 1vw, 2rem);
+$a: clamp(0.9rem, 1vw, 2rem);

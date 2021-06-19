@@ -25,6 +25,7 @@
                     font-size: $box1__fontSize;
                     font-family: 'Heebo', sans-serif;
                     font-weight: 800;
+                    padding: 0 1rem;
                     span {
                         color: $title;
                     }
@@ -44,6 +45,7 @@
                     padding-right: 2rem;
                     padding-left: 2rem;
                     margin-top: 5rem;
+                    margin-left: 1rem;
                     a {
                         color: white;
                         text-decoration: none;
@@ -151,6 +153,18 @@
 
 @media screen and (max-width: 700px) {
     .title__container {
-        width: 90vw !important;
+        width: 100vw !important;
+    }
+    .box1 {
+        width: 100vw !important;
+        text-align: center;
+    }
+    #title {
+        width: 100vw !important;
+    }
+    .box1__btn {
+        width: 40% !important;
+        margin: auto !important;
+        margin-top: 3rem !important;
     }
 }

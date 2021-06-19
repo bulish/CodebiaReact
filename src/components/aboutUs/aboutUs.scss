@@ -1,13 +1,14 @@
 @import './variables';
 
 #aboutUs{
-    padding: $aboutUs__paddingTop 0 $aboutUs__paddingBottom 0;
+    padding: $aboutUs__paddingTop 1rem $aboutUs__paddingBottom 1rem;
     min-height: fit-content !important;
     position: relative;
     .aboutUs__container {
         display: grid;
         padding: $aboutUsContainer__padding 0;
         .aboutUs__container__left {
+            position: relative;
             grid-area: first;
             width: 100%;
             margin-bottom: $left__marginBottom;
@@ -29,6 +30,7 @@
                 font-family: 'Rubik', sans-serif;
                 line-height: 1.75rem;
                 font-size: $text__fontSize;
+                width: 100%;
             }
             .aboutUs__container__btn {
                 margin-top: 4rem;

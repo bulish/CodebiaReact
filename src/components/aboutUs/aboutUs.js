@@ -46,12 +46,12 @@ function AboutUs() {
 						<div className="aboutUs__title">Who we are</div>
 						<div className="aboutUs__container__subtitle">- Codebia</div>
 						<div className="aboutUs__container__left__text">
-							Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-							Temporibus obcaecati blanditiis et! Magnam debitis vitae deleniti
-							officiis, consequatur odit esse blanditiis veritatis illo placeat
-							voluptatibus neque? Accusantium possimus eaque consectetur autem
-							sunt quibusdam, corporis voluptatibus cum explicabo quis ducimus
-							quidem distinctio fugiat voluptates labore. Eveniet ipsum eaque
+							Lorem ipsum dolor sit, amet conser adipig elit.
+							Tempor obecati blait et! Magnam debitis vitae deleniti
+							officiis, consequr odit esse blatiis vtatis illo placeat
+							volupbus neque? Accuium possimus eaque conetur autem
+							sunt quibam, corporis volibus cum explicabo quis ducimus
+							quidem dnctio fugiat voltes labore. Eveniet ipsum eaque
 							magni rerum neque.
 						</div>
 						<div className="aboutUs__container__btn" onMouseEnter={mouseEnterBtn} onMouseLeave={mouseLeaveBtn}>

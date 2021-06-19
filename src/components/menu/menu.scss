@@ -1,4 +1,4 @@
-$grey: rgb(105, 105, 105);
+@import './variables';
 
 .menu {
     width: 95vw;
@@ -24,30 +24,42 @@ $grey: rgb(105, 105, 105);
         left: 50%;
         transform: translate(-50%, -50%);
         opacity: 0;
+        width: $menu__width;
+        text-align: right;
         ul {
+            width: fit-content;
+            margin: auto;
             li {
-                position: relative;
+                margin: auto;
                 list-style-type: none;
                 overflow: hidden;
+                position: relative;
                 span {
                     color: white;
                     position: absolute;
-                    top: 1rem;
+                    top: 0;
+                    left: 0;
                     font-family: 'Londrina Outline', cursive;
-                    font-size: 1.5rem;
+                    font-size: $span;
                 }
                 a {
                     color: white;
                     text-decoration: none;
                     font-family: 'Londrina Outline', cursive;
                     text-transform: uppercase;
-                    font-size: 5.75rem;
-                    margin-left: 3rem;
+                    font-size: $a;
+                    margin-left: 5rem;
                     &:hover {
                         color: $grey;
                     }
                 }
             }
         }
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .menu {
+        width: 100vw !important;
     }
 }

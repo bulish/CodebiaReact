@@ -1,15 +1,14 @@
 import React from 'react';
-import gsap from 'gsap';
+import { gsap } from 'gsap';
 
 function Text() {
-
-    const mouseEnterBtn = () => {
+	const mouseEnterBtn = () => {
 		gsap.to('.text__btn__div', { x: '100%' });
-	}
+	};
 
 	const mouseLeaveBtn = () => {
 		gsap.to('.text__btn__div', { x: '0%' });
-	}
+	};
 	return (
 		<section id="text">
 			<div className="text__textContainer">

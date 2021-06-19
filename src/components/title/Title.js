@@ -13,27 +13,6 @@ function Title(){
 		gsap.to('.box1__btn__hover', { x: '-100%' });
 	}
 
-	// yellow divs
-
-		// var box2 = document.querySelector('.box2');
-		// var box2Height = window.getComputedStyle(box2).getPropertyValue('height');
-		// box2Height = box2Height.slice(0, box2Height.indexOf('p'));
-		// var box2Width = window.getComputedStyle(box2).getPropertyValue('width');
-		// box2Width = box2Width.slice(0, box2Width.indexOf('p'));
-		// var firstYellowDiv = document.querySelector('.box2__yellowDiv');
-		// var widthYellowDiv = (box2Height ** 2 + box2Width ** 2) ** 0.5;
-		// firstYellowDiv.style.width = widthYellowDiv + 'px';
-	
-		// var box3 = document.querySelector('.box3');
-		// var box3Height = window.getComputedStyle(box3).getPropertyValue('height');
-		// box3Height = box3Height.slice(0, box3Height.indexOf('p'));
-		// var box3Width = window.getComputedStyle(box3).getPropertyValue('width');
-		// box3Width = box3Width.slice(0, box3Width.indexOf('p'));
-		// var secondYellowDiv = document.querySelector('.box3__yellowDiv');
-		// var widthYellowDiv = (box3Height ** 2 + box3Width ** 2) ** 0.5;
-		// secondYellowDiv.style.width = widthYellowDiv + 'px';
-
-
 	const mouseEnterBox2 = () => {
 		gsap.to('.box2__yellowDiv', { y: '0', x: 0 });
 		gsap.to('.box2__text', { color: 'black' });
@@ -57,7 +36,10 @@ function Title(){
 	// box1
 
 	const onLoadBox1 = () => {
-		gsap.fromTo('.box1', {scale: 1.25}, {scale: 1});
+		let tl = gsap.timeline();
+		tl.fromTo('.box1', {scale: 1.25}, {scale: 1});
+		tl.fromTo('.box2__text', {opacity: 0}, {opacity: 1});
+		tl.fromTo('.box3__text', {opacity: 0}, {opacity: 1}, '<');
 	}
 
 	window.addEventListener("load", onLoadBox1);

@@ -46,7 +46,6 @@ $titleBlack: rgb(20, 20, 20);
                 }
     }
     .arrow {
-        color: #FFC03F;
         bottom: 3rem;
         font-size: 4rem;
         width: 5vw;
@@ -54,6 +53,10 @@ $titleBlack: rgb(20, 20, 20);
         cursor: pointer;
         position: fixed;
         text-align: center;
+        a {
+            color: #FFC03F;
+            text-decoration: none;
+        }
     }
 }
 

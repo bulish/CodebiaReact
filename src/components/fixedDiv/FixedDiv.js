@@ -25,7 +25,7 @@ function FixedDiv({ menuFunction }) {
 				onMouseEnter={mouseEnterArrow}
 				onMouseLeave={mouseLeaveArrow}
 			>
-				&darr;
+				<a href="#text">&darr;</a>
 			</div>
 		</div>
 	);

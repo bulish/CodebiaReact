@@ -24,9 +24,9 @@ function App() {
 			tl.to('.secondSpan', { opacity: 0, ease: 'linear', duration: 0.25 }, '<');
 			tl.to('.thirdSpan', { rotation: -45 , ease: 'linear', duration: 0.25}, "<");
 			tl.fromTo('.menu', {scale: 0}, {scale:1}, "<");
-			tl.fromTo('.menu', {y:'-150%'}, { y: 0});
-			tl.fromTo('.menu__div', {opacity: 0}, { opacity: 1});
-			tl.fromTo('.menu__div', {display: 'none', scale: 1}, { display: 'block', scale: 100, duration: 2.5 });
+			tl.fromTo('.menu', {y:'-150%'}, { y: 0}, "<");
+			tl.fromTo('.menu__div', {opacity: 0}, { opacity: 1}, '<');
+			tl.fromTo('.menu__div', {display: 'none', scale: 1}, { display: 'block', scale: 100, duration: 2.5 }, '+=0.1');
 			tl.fromTo('.menu__container', {opacity: 0}, { opacity: 1 }, '-=2');
 		} else {
 			tl.to('.firstSpan', { rotation: 0, ease: 'linear', duration: 0.25 });

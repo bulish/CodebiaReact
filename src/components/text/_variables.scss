@@ -19,3 +19,8 @@ $title__fontSize: clamp(1.8rem, 3vw, 6.5rem);
 $subtitle__fontSize: clamp(1.1rem, 1.1vw, 3rem);
 $contact__fontSize: clamp(1rem, 1vw, 2rem);
 $a: clamp(0.85rem, 1vw, 2rem);
+
+// others
+$circle__height: calc(170vh - 10rem);
+$circle__width: calc(170vh - 10rem);
+$circle__right: calc(50vw - 5rem);

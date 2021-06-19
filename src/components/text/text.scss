@@ -41,13 +41,13 @@
         }
     }
     .circle {
-        width: 1000px;
-        height: 1000px;
+        width: $circle__width;
+        height: $circle__height;
         border-radius: 50%;
         border: 0.1px solid rgb(133, 125, 125);
         position: absolute;
-        right: -30rem;
-        top: 15%;
+        left: $circle__right;
+        top: 0;
     }
     .contact__container {
         padding: $contact__paddingY $contact__paddingX;

@@ -7,14 +7,20 @@
 }
 
 body {
-    width: 100vw;
+    width: 100vw !important;
     overflow-x: hidden;
 }
 
 section {
     width: 95vw !important;
     height: fit-content;
-    overflow-x: hidden
+    background-color: rgb(238, 233, 226);
+}
+
+@media screen and (max-width: 700px) {
+    section {
+        width: 90vw !important;
+    }
 }
 
 // title

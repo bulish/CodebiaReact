@@ -1,0 +1,23 @@
+// colors
+$orange: #FFC03F;
+
+// paddings
+$aboutUs__paddingTop: clamp(3rem, 20vh, 30rem);
+$aboutUs__paddingBottom: calc(10vh + 4.5rem);
+$left__padding: calc(10vw - 1.35rem);
+$text__padding: clamp(1rem, 15vw, 10rem);
+$works__padding: calc(3vh - 0.25rem);
+$aboutUsContainer__padding: calc(8vh - 0.75rem);
+
+// margin
+$left__marginBottom: calc(3vh + 2rem);
+$subtitle__margin: calc(1vh + 1.5rem);
+
+// font-size
+$title__fontSize: clamp(3.5rem, 7vw, 9.5rem);
+$subtitle__fontSize: clamp(1.5rem, 1.5vw, 3rem);
+$text__fontSize: clamp(0.9rem, 1vw, 2rem);
+
+// others
+$right__left: calc(13vw - 1.5rem);
+$img: clamp(15rem, 30vw, 40rem);

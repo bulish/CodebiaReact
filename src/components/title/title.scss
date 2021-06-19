@@ -1,6 +1,4 @@
-$titleBlack: rgb(20, 20, 20);
-$orange: #FFC03F;
-$title: #C6A965;
+@import './variables';
 
 #title {
     overflow: hidden;
@@ -20,12 +18,11 @@ $title: #C6A965;
             position: relative;
             .box1__text{
                 color: white;
-                bottom: 13rem;
-                position: absolute;
-                left: 8rem;
-                bottom: 10rem;
+                position:absolute;
+                top: $box1__top;
+                left: $box1__left;
                 .box1__title {
-                    font-size: 6.75rem;
+                    font-size: $box1__fontSize;
                     font-family: 'Heebo', sans-serif;
                     font-weight: 800;
                     span {
@@ -34,9 +31,8 @@ $title: #C6A965;
                 }
                 .box1__btn {
                     border: 2px solid $title;
-                    // border-radius: 3rem;
                     width: 60%;
-                    font-size: 1.25rem;
+                    font-size: $box1__btn;
                     font-family: 'Mukta', sans-serif;
                     height: 2.5rem;
                     line-height: 2.5rem;
@@ -77,7 +73,7 @@ $title: #C6A965;
             .box2__text {
                 bottom: 2rem;
                 left: 2rem;
-                font-size: 2rem;
+                font-size: $box2__fontSize;
                 font-family: 'Rubik', sans-serif;
                 z-index: 1;
                 position: absolute;
@@ -86,7 +82,7 @@ $title: #C6A965;
                     text-decoration: none;
                 }
                 .box2__text__arrow{
-                    font-size: 2rem;
+                    font-size: $box2__fontSize;
                 }
             }
             .box2__yellowDiv {
@@ -110,7 +106,7 @@ $title: #C6A965;
             .box3__text {
                 bottom: 2rem;
                 left: 2rem;
-                font-size: 2rem;
+                font-size: $box2__fontSize;
                 font-family: 'Rubik', sans-serif;
                 z-index: 1;
                 position: absolute;
@@ -119,7 +115,7 @@ $title: #C6A965;
                     text-decoration: none;
                 }
                 .box3__text__arrow{
-                    font-size: 2rem;
+                    font-size: $box2__fontSize;
                 }
             }
             .box3__yellowDiv {
@@ -138,20 +134,6 @@ $title: #C6A965;
     }
 }
 
-@media screen and (max-width: 1350px) {
-    .box1__title {
-        font-size: 5.5rem !important;
-    }
-}
-
-@media screen and (max-width: 1150px) {
-    .box1__title {
-        font-size: 4.8rem !important;
-    }
-    .box1__text {
-        left: 4rem !important;
-    }
-}
 
 @media screen and (max-width: 996px) {
     .title__container {
@@ -159,14 +141,16 @@ $title: #C6A965;
         'first first'
         'second third' !important;
     }
-    .box1__text {
-        left: 3rem !important;
-        bottom: 3rem !important;
-    }
-    .box1__title {
-        font-size: 3rem !important;
-    }
     .box2, .box3 {
-        height: 30vh !important;
+        display: none !important;
+    }
+    .box1 {
+        height: 100vh;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .title__container {
+        width: 90vw !important;
     }
 }

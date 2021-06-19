@@ -9,7 +9,6 @@ function WhatWeDoCard({ cards, setCards, card }) {
 			<div className="card__text">{card.text}</div>
 			<div className="card__btn">
 				<div className="card__btn">{card.button}</div>
-				<div className="card__btn__hover"></div>
 			</div>
 		</div>
 	);

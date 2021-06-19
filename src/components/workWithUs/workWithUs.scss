@@ -1,28 +1,28 @@
-$orange: #e7b34b;
+@import './variables';
 
 #workWithUs {
-    padding: 15rem 20rem 10rem 20rem;
+    padding: $workWithUs__paddingTop $workWithUs__paddingX $workWithUs__paddingBottom $workWithUs__paddingX;
     display: grid;
     .workWithUs__title {
         font-family: 'Cabin', sans-serif;
-        font-size: 9rem;
+        font-size: $title__fontSize;
         font-weight: 700;
+        padding-left: 1rem;
         z-index: 8;
         span {
             color: $orange;
         }
     }
     .workWithUs__subtitle{
-        font-size: 1.75rem;
-        padding-top: 3rem;
-        padding-bottom: 3rem;
+        font-size: $subtitle__fontSize;
+        padding: $subtitle__paddingTop $subtitle__paddingX $subtitle__paddingBottom $subtitle__paddingX;
         font-family: 'Prompt', sans-serif;
     }
     .workWithUs__works {
         display: grid;
         grid-template-columns: 50% 50%;
         grid-template-areas: 'first second';
-        padding-top: 5rem;
+        padding: $works__paddingTop $works__paddingX $works__paddingBottom $works__paddingX;
         width: 100%;
         .position {
             position: relative;
@@ -48,5 +48,15 @@ $orange: #e7b34b;
         .works__second {
             grid-area: second;
         }
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .workWithUs__works {
+        grid-template-columns: 100% !important;
+        grid-template-areas: 'first''second' !important;
+    }
+    .position {
+        width: 100% !important;
     }
 }

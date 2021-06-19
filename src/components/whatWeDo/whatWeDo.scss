@@ -1,14 +1,12 @@
-$span: #eeab24;
-$orange: #FFC03F;
-$grey: rgb(223, 215, 215);
+@import './variables';
 
 #whatWeDo {
     background-color: black;
     color: white;
     text-align: center;
-    padding: 10rem 15rem 10rem 15rem;
+    padding: $whatWeDo__paddingTop $whatWeDo__paddingX $whatWeDo__paddingBottom $whatWeDo__paddingX;
     .whatWeDo__title {
-        font-size: 7rem;
+        font-size: $title__fontSize;
         font-family: 'Cabin', sans-serif;
         font-weight: 700;
         span {
@@ -16,11 +14,10 @@ $grey: rgb(223, 215, 215);
         }
     }
     .whatWeDo__subtitle {
-        font-size: 1.25rem;
-        padding-top: 3rem;
-        padding-bottom: 6rem;
+        font-size: $subtitle__fontSize;
+        padding: $subtitle__paddingTop $subtitle__paddingX $subtitle__paddingBottom $subtitle__paddingX;
         font-family: 'Prompt', sans-serif;
-        line-height: 2.75rem;
+        line-height: $subtitle__lineHeight;
     }
     .whatWeDo__container {
         margin: auto;
@@ -28,6 +25,7 @@ $grey: rgb(223, 215, 215);
         grid-template-areas: 'first second third fourth';
         grid-template-columns: 25% 25% 25% 25%;
         grid-gap: 2rem;
+        padding: 0 $whatWeDoContainer__paddingX;
         .card:nth-child(1){
             grid-area: first;
         }
@@ -44,15 +42,14 @@ $grey: rgb(223, 215, 215);
             text-align: left;
             position: relative;
             padding: 2rem;
-            background: rgb(24, 23, 23);
-            border: 0.05px solid transparent;
+            background: rgb(43, 41, 41);
             .card__subtitle {
                 color: $orange;
                 font-family: 'Signika Negative', sans-serif;
-                font-size: 1.25rem;
+                font-size: $card__subtitle;
             }
             .card__title {
-                font-size: 3rem;
+                font-size: $card__title;
                 font-family: 'Noto Sans', sans-serif;
                 padding-bottom: 1.5rem;
                 color: $grey;
@@ -63,7 +60,7 @@ $grey: rgb(223, 215, 215);
             }
             .card__btn {
                 position: relative;
-                margin-top: 2rem;
+                margin-top: $btn__marginTop;
                 width: fit-content;
                 padding: 0.3rem 0.7rem;
                 font-family: 'Prompt', sans-serif;
@@ -71,20 +68,28 @@ $grey: rgb(223, 215, 215);
                 cursor: pointer;
                 overflow: hidden;
                 text-transform: uppercase;
+                text-decoration: none;
                 &:hover {
                     color: rgb(167, 161, 161);
                 }
-                .card__btn__hover {
-                    position: absolute;
-                    background-color: white;
-                    width: 100%;
-                    height: 100%;
-                    left: 0;
-                    top: 0;
-                    z-index: -1;
-                    transform: translateY(100%);
-                }
             }
         }
+    }
+}
+
+@media screen and (max-width: 1500px) {
+    .whatWeDo__container {
+        grid-template-areas: 'first second' 'third fourth' !important;
+        grid-template-columns: 50% 50% !important;
+        grid-gap: 2rem;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .whatWeDo__container {
+        grid-template-areas: 'first' 'second'
+         'third' 'fourth' !important;
+        grid-template-columns: 100% !important;
+        grid-gap: 2rem;
     }
 }

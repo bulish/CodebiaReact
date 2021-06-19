@@ -9,12 +9,11 @@ $titleBlack: rgb(20, 20, 20);
     border-left: 1px solid white;
     z-index: 99999;
     position: fixed;
+    display: flex;
+    justify-content: center;
     .fixed__div__menu{
-        top: 2rem;
-        margin: auto;
-        text-align: center;
         position: fixed;
-        right: 1.6vw;
+        padding-top: 2rem;
         input{
             display: block;
             width: 40px;
@@ -58,31 +57,16 @@ $titleBlack: rgb(20, 20, 20);
     }
 }
 
-@media screen and (max-width: 1330px) {
-    .fixed__div__menu {
-        right: 0.7rem !important;
-    }
-}
-
-
-@media screen and (max-width: 1150px) {
-    span {
-        width: 25px !important;
-        height: 3px !important;
-    }
-}
-
 @media screen and (max-width: 996px) {
     .title__container {
         grid-template-areas:
         'first first'
         'second third' !important;
     }
-    .box1__text {
-        left: 3rem !important;
-        bottom: 3rem !important;
-    }
-    .box1__title {
-        font-size: 3rem !important;
+}
+
+@media screen and (max-width: 700px) {
+    .fixed__div {
+        width: 15vw !important;
     }
 }

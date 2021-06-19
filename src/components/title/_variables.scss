@@ -1,0 +1,13 @@
+// colors
+
+$titleBlack: rgb(20, 20, 20);
+$orange: #FFC03F;
+$title: #C6A965;
+
+// box1
+
+$box1__top: calc(30% - 3vh);
+$box1__left: calc(10% - 2vw);
+$box1__fontSize:  clamp(3rem, 5vw, 8rem);
+$box1__btn:  clamp(1.05rem, 1.1vw, 2.3rem);
+$box2__fontSize:  clamp(1.6rem, 2.5vw, 2.5rem);

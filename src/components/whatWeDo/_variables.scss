@@ -1,0 +1,26 @@
+// colors
+$span: #eeab24;
+$orange: #FFC03F;
+$grey: rgb(223, 215, 215);
+
+// padding
+$whatWeDo__paddingTop: clamp(3rem, 20vh, 30rem);
+$whatWeDo__paddingBottom: calc(20vh - 2.5rem);
+$whatWeDo__paddingX: calc(13vw - 4.5rem);
+$subtitle__paddingX: calc(1vw + 1rem);
+$subtitle__paddingTop: calc(3vh + 1rem);
+$subtitle__paddingBottom: calc(6vh + 1rem);
+$whatWeDoContainer__paddingX: calc(2vw + 1rem);
+
+// margin
+$btn__marginTop: calc(1vh + 0.5rem);
+
+// font-size
+$title__fontSize: clamp(3.5rem, 7vw, 9.5rem);
+$subtitle__fontSize: clamp(1.1rem, 1.1vw, 3rem);
+$text__fontSize: clamp(0.9rem, 1vw, 2rem);
+$card__title: clamp(2rem, 2.2vw, 3.5rem);
+$card__subtitle: clamp(1.1rem, 1.2vw, 3rem);
+
+// others
+$subtitle__lineHeight: calc(1.5vh + 1rem);

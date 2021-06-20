@@ -17,6 +17,9 @@
             border-bottom: 1px solid white;
             position: relative;
             .box1__text{
+                --mask: linear-gradient(-45deg, transparent 100%, black 150%);
+                -webkit-mask-image: var(--mask);
+                mask-image: var(--mask);
                 color: white;
                 position:absolute;
                 top: $box1__top;

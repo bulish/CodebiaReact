@@ -9,17 +9,92 @@ function WhatWeDo({cards, setCards}) {
 	const testRef = useRef(null);
 	useEffect(() => {
 		const element = testRef.current;
-		gsap.fromTo(
-			element.querySelector('.whatWeDo__container'),
+		let tl = gsap.timeline();
+		const bgColor = '#dfc8c8';
+		const easing = 'Power0.easeNone';
+		tl.fromTo(
+			element.querySelectorAll('.top-side'),
+			1,
 			{
-				scale: 0.8,
+				width: 0,
+				background: bgColor,
+				mmediateRender: false,
+				autoRound: false,
+				ease: easing,
 			},
 			{
-				scale: 1,
+				width: '100%',
+				background: bgColor,
 				scrollTrigger: {
-					trigger: element.querySelector('.whatWeDo__container'),
-					start: 'top-=350 top',
-					end: '-10%',
+					trigger: element.querySelector('.whatWeDo__subtitle'),
+					start: 'top',
+					end: '100%',
+					scrub: true,
+					pin: true,
+				},
+			},
+		);
+		tl.fromTo(
+			element.querySelectorAll('.right-side'),
+			1,
+			{
+				height: 0,
+				background: bgColor,
+				immediateRender: false,
+				autoRound: false,
+				ease: easing,
+			},
+			{
+				height: '100%',
+				background: bgColor,
+				scrollTrigger: {
+					trigger: element.querySelector('.whatWeDo__subtitle'),
+					start: 'top',
+					end: '100%',
+					scrub: true,
+					pin: true,
+				},
+			},
+		);
+		tl.fromTo(
+			element.querySelectorAll('.bottom-side'),
+			1,
+			{
+				width: 0,
+				background: bgColor,
+				immediateRender: false,
+				autoRound: false,
+				ease: easing,
+			},
+			{
+				width: '100%',
+				background: bgColor,
+				scrollTrigger: {
+					trigger: element.querySelector('.whatWeDo__subtitle'),
+					start: 'top',
+					end: '100%',
+					scrub: true,
+					pin: true,
+				},
+			},
+		);
+		tl.fromTo(
+			element.querySelectorAll('.left-side'),
+			1,
+			{
+				height: 0,
+				background: bgColor,
+				immediateRender: false,
+				autoRound: false,
+				ease: easing,
+			},
+			{
+				height: '100%',
+				background: bgColor,
+				scrollTrigger: {
+					trigger: element.querySelector('.whatWeDo__subtitle'),
+					start: 'top',
+					end: '100%',
 					scrub: true,
 					pin: true,
 				},

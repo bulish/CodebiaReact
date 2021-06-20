@@ -43,6 +43,45 @@
             position: relative;
             padding: 2rem;
             background: rgb(36, 35, 35);
+
+            .left-side,
+            .top-side,
+            .right-side,
+            .bottom-side {
+            position: absolute;
+            background: none transparent;
+            width: 0px;
+            height: 0px;
+            }
+
+            .left-side {
+            left: 0;
+            bottom: 0;
+            height: 200px;
+            width: 1px;
+            }
+
+            .top-side {
+            top: 0;
+            left: 0;
+            width: 200px;
+            height: 1px;
+            }
+
+            .right-side {
+            right: 0;
+            top: 0;
+            height: 200px;
+            width: 1px;
+            }
+
+            .bottom-side {
+            bottom: 0;
+            right: 0;
+            width: 200px;
+            height: 1px;
+            }
+
             .card__subtitle {
                 color: $orange;
                 font-family: 'Signika Negative', sans-serif;

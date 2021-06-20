@@ -49,8 +49,8 @@ function AboutUs() {
 					x: -1000,
 					scrollTrigger: {
 						trigger: element.querySelector('.aboutUs__container'),
-						start: 'top top',
-						end: '50%',
+						start: 'top-=300 top',
+						end: '20%',
 						scrub: true,
 						pin: true,
 					},

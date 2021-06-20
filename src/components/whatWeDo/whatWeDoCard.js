@@ -13,11 +13,21 @@ function WhatWeDoCard({ card }) {
 	};
 	return (
 		<div className="card">
+			<span className="left-side"></span>
+			<span className="top-side"></span>
+			<span className="right-side"></span>
+			<span className="bottom-side"></span>
 			<div className="card__subtitle">{card.subtitle}</div>
 			<div className="card__title">{card.title}</div>
 			<div className="card__text">{card.text}</div>
-			<div className="card__btn" onMouseEnter={mouseEnterBtn} onMouseLeave={mouseLeaveBtn}>{card.button}
-				<div className="card__btn__hover"></div></div>
+			<div
+				className="card__btn"
+				onMouseEnter={mouseEnterBtn}
+				onMouseLeave={mouseLeaveBtn}
+			>
+				{card.button}
+				<div className="card__btn__hover"></div>
+			</div>
 		</div>
 	);
 }

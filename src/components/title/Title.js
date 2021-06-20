@@ -3,6 +3,15 @@ import gsap from "gsap";
 
 function Title(){
 
+	const onloadFunction = () => {
+		gsap.to('.box1__text', {
+			duration: 3.5,
+			ease: 'sine.out',
+			'--mask': 'linear-gradient(-45deg, transparent -50%, black 0%)',
+		});
+	}
+	window.addEventListener('load', onloadFunction);
+
 	// title btn
 
 	const mouseEnterBtn = () => {
@@ -33,16 +42,6 @@ function Title(){
 		gsap.to('.box3__text', { color: 'white' });
 	};
 
-	// box1
-
-	const onLoadBox1 = () => {
-		let tl = gsap.timeline();
-		tl.fromTo('.box1', {scale: 1.25}, {scale: 1});
-		tl.fromTo('.box2__text', {opacity: 0}, {opacity: 1});
-		tl.fromTo('.box3__text', {opacity: 0}, {opacity: 1}, '<');
-	}
-
-	window.addEventListener("load", onLoadBox1);
 	return (
 		<div id="title">
 			<div className="title__container">

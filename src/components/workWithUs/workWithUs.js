@@ -1,30 +1,8 @@
-import React, { useRef, useEffect } from 'react';
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-gsap.registerPlugin(ScrollTrigger);
+import React from 'react';
 
 function WorkWithUs() {
-	const testRef = useRef(null);
-	useEffect(() => {
-		const element = testRef.current;
-		gsap.fromTo(
-			element.querySelector('.content'),
-			{
-				opacity: 0,
-			},
-			{
-				opacity: 1,
-				scrollTrigger: {
-					trigger: element.querySelector('.content'),
-					scrub: true,
-					pin: true,
-				},
-			},
-		);
-	}, []);
 	return (
-		<section id="workWithUs" ref={testRef}>
-			<div className="content">
+		<section id="workWithUs">
 				<div className="workWithUs__title">
 					Work <span>with</span> us
 				</div>
@@ -92,7 +70,6 @@ function WorkWithUs() {
 						</div>
 					</div>
 				</div>
-			</div>
 		</section>
 	);
 }

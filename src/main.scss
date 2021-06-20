@@ -20,6 +20,11 @@ section {
     height: fit-content;
 }
 
+// .content {
+//     display: none;
+//     opacity: 0;
+// }
+
 @media screen and (max-width: 700px) {
     section {
         width: 100vw !important;
@@ -50,3 +55,4 @@ section {
 @import './components//workWithUs/workWithUs.scss';
 @import './components/menu/menu.scss';
 @import './components/text/text.scss';
+@import './components//loading/loading.scss';

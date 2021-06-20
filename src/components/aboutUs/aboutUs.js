@@ -78,7 +78,9 @@ function AboutUs() {
 						onMouseEnter={mouseEnterBtn}
 						onMouseLeave={mouseLeaveBtn}
 					>
-						<a href="#whatWeDo">See Our Works</a>
+						<a href="#whatWeDo" data-scroll-to>
+							See Our Works
+						</a>
 						<div className="aboutUs__container__btn__div"></div>
 					</div>
 				</div>
@@ -90,7 +92,7 @@ function AboutUs() {
 				className="aboutUs__works"
 				data-scroll
 				data-scroll-direction="horizontal"
-				data-scroll-positon = "right"
+				data-scroll-positon="right"
 				data-scroll-speed="2"
 			>
 				<div
@@ -100,7 +102,7 @@ function AboutUs() {
 				>
 					<div className="aboutUs__works__first__div"></div>
 					<div className="aboutUs__works__first__text">
-						<a href="#">
+						<a href="#text" data-scroll-to>
 							<p>Web Development</p>View &rarr;
 						</a>
 					</div>
@@ -112,7 +114,7 @@ function AboutUs() {
 				>
 					<div className="aboutUs__works__second__div"></div>
 					<div className="aboutUs__works__second__text">
-						<a href="#">
+						<a href="#text" data-scroll-to>
 							<p>App Development</p>View &rarr;
 						</a>
 					</div>

@@ -14,10 +14,18 @@ function Text() {
 			<div className="text__textContainer">
 				<div className="subtitle">Codebia</div>
 				<div className="basicText">
-					<p data-scroll data-scroll-speed="1" data-scroll-direction="horizontal">
+					<p
+						data-scroll
+						data-scroll-speed="1"
+						data-scroll-direction="horizontal"
+					>
 						Let’s work together to build
 					</p>
-					<p data-scroll data-scroll-speed="-1" data-scroll-direction="horizontal">
+					<p
+						data-scroll
+						data-scroll-speed="-1"
+						data-scroll-direction="horizontal"
+					>
 						something great.
 					</p>
 				</div>
@@ -26,7 +34,9 @@ function Text() {
 					onMouseEnter={mouseEnterBtn}
 					onMouseLeave={mouseLeaveBtn}
 				>
-					<a href="#">Join us</a>
+					<a href="#aboutUs" data-scroll-to>
+						Join us
+					</a>
 					<div className="text__btn__div"></div>
 				</div>
 			</div>
@@ -41,16 +51,24 @@ function Text() {
 			<div className="icons">
 				<ul>
 					<li>
-						<a href="#">Instagram</a>
+						<a href="#title" data-scroll-to>
+							Instagram
+						</a>
 					</li>
 					<li>
-						<a href="#">Facebook</a>
+						<a href="#title" data-scroll-to>
+							Facebook
+						</a>
 					</li>
 					<li>
-						<a href="#">YouTube</a>
+						<a href="#title" data-scroll-to>
+							YouTube
+						</a>
 					</li>
 					<li>
-						<a href="#">Twitter</a>
+						<a href="#title" data-scroll-to>
+							Twitter
+						</a>
 					</li>
 				</ul>
 			</div>

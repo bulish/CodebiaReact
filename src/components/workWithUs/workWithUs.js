@@ -12,13 +12,13 @@ function WorkWithUs() {
 				quia consequuntur magni dolores eos qui ratione voluptatem sequi
 				nesciunt.
 			</div>
-			<div className="workWithUs__works">
-				<div
-					className="works__first"
-					data-scroll
-					data-scroll-direction="horizontal"
-					data-scroll-speed="-.5"
-				>
+			<div
+				className="workWithUs__works"
+				data-scroll
+				data-scroll-direction="horizontal"
+				data-scroll-speed="-1"
+			>
+				<div className="works__first">
 					<div className="position">
 						Website Design <span>+</span>
 					</div>
@@ -44,12 +44,7 @@ function WorkWithUs() {
 						<span>+</span>
 					</div>
 				</div>
-				<div
-					className="works__second"
-					data-scroll
-					data-scroll-direction="horizontal"
-					data-scroll-speed=".5"
-				>
+				<div className="works__second">
 					<div className="position">
 						Responsive Web Design
 						<span>+</span>

@@ -55,7 +55,9 @@ function Title(){
 							onMouseEnter={mouseEnterBtn}
 							onMouseLeave={mouseLeaveBtn}
 						>
-							<a href="#aboutUs">MORE INFO</a>
+							<a href="#aboutUs" data-scroll-to>
+								MORE INFO
+							</a>
 							<div className="box1__btn__hover"></div>
 						</div>
 					</div>
@@ -66,7 +68,7 @@ function Title(){
 					onMouseLeave={mouseLeaveBox2}
 				>
 					<div className="box2__text">
-						<a href="#aboutUs">
+						<a href="#aboutUs" data-scroll-to>
 							About Us <div className="box2__text__arrow">&rarr;</div>
 						</a>
 					</div>
@@ -78,7 +80,7 @@ function Title(){
 					onMouseLeave={mouseLeaveBox3}
 				>
 					<div className="box3__text">
-						<a href="#text">
+						<a href="#text" data-scroll-to>
 							Contact <div className="box3__text__arrow">&rarr;</div>
 						</a>
 					</div>

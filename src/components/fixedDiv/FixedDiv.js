@@ -25,7 +25,9 @@ function FixedDiv({ menuFunction }) {
 				onMouseEnter={mouseEnterArrow}
 				onMouseLeave={mouseLeaveArrow}
 			>
-				<a href="#text">&darr;</a>
+				<a href="#text" data-scroll-to>
+					&darr;
+				</a>
 			</div>
 		</div>
 	);

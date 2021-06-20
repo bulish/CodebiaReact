@@ -1,8 +1,6 @@
-import React, { useRef, useEffect } from 'react';
+import React from 'react';
 import image from './aboutUs.jpeg';
 import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-gsap.registerPlugin(ScrollTrigger); 
 
 function AboutUs() {
 	const mouseEnterBtn = () => {
@@ -38,52 +36,33 @@ function AboutUs() {
 		timeline.to('.aboutUs__works__second__text', { y: '150%' }, '<');
 		timeline.to('.aboutUs__works__second__div', { x: '-100%' });
 	};
-	
-	
-	const testRef = useRef(null);
-	useEffect(() => { 
-    	const element = testRef.current;
-		gsap.from(
-				element.querySelector('.aboutUs__container__left'),
-				{
-					x: -1000,
-					scrollTrigger: {
-						trigger: element.querySelector('.aboutUs__container'),
-						start: 'top-=300 top',
-						end: '20%',
-						scrub: true,
-						pin: true,
-					},
-				},
-			);
-	}, []);
-	useEffect(() => { 
-    	const element = testRef.current;
-		gsap.fromTo(
-				element.querySelector('.aboutUs__works'),
-				{
-					scale: 0.8,
-				},
-				{
-					scale: 1,
-					scrollTrigger: {
-						trigger: element.querySelector('.aboutUs__works'),
-						start: 'top-=100 top',
-						end: '50%',
-						scrub: true,
-						pin: true,
-					},
-				},
-			);
-	}, []);
 
 	return (
-		<section id="aboutUs" ref={testRef}>
+		<section id="aboutUs" data-scroll-section>
 			<div className="aboutUs__container">
 				<div className="aboutUs__container__left">
-					<div className="aboutUs__title">Who we are</div>
-					<div className="aboutUs__container__subtitle">- Codebia</div>
-					<div className="aboutUs__container__left__text">
+					<div
+						className="aboutUs__title"
+						data-scroll
+						data-scroll-speed="1.5"
+						data-scroll-direction="vertical"
+					>
+						Who we are
+					</div>
+					<div
+						className="aboutUs__container__subtitle"
+						data-scroll
+						data-scroll-speed="1.5"
+						data-scroll-direction="vertical"
+					>
+						- Codebia
+					</div>
+					<div
+						className="aboutUs__container__left__text"
+						data-scroll
+						data-scroll-speed="1.5"
+						data-scroll-direction="vertical"
+					>
 						Lorem ipsum dolor sit, amet conser adipig elit. Tempor obecati blait
 						et! Magnam debitis vitae deleniti officiis, consequr odit esse
 						blatiis vtatis illo placeat volupbus neque? Accuium possimus eaque
@@ -93,10 +72,13 @@ function AboutUs() {
 					</div>
 					<div
 						className="aboutUs__container__btn"
+						data-scroll
+						data-scroll-speed="1.5"
+						data-scroll-direction="vertical"
 						onMouseEnter={mouseEnterBtn}
 						onMouseLeave={mouseLeaveBtn}
 					>
-						<a href="#">See Our Works</a>
+						<a href="#whatWeDo">See Our Works</a>
 						<div className="aboutUs__container__btn__div"></div>
 					</div>
 				</div>
@@ -104,7 +86,13 @@ function AboutUs() {
 					<img src={image} alt="aboutUs" />
 				</div>
 			</div>
-			<div className="aboutUs__works">
+			<div
+				className="aboutUs__works"
+				data-scroll
+				data-scroll-direction="horizontal"
+				data-scroll-positon = "right"
+				data-scroll-speed="2"
+			>
 				<div
 					className="aboutUs__works__first"
 					onMouseEnter={mouseEnterFirst}

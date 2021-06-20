@@ -12,16 +12,7 @@ body {
 }
 
 ::-webkit-scrollbar {
-    width: 1rem;
-}
-::-webkit-scrollbar-track {
-    background-color: rgb(20, 20, 20);
-}
-::-webkit-scrollbar-thumb {
-    background-color: rgb(63, 62, 62);
-    &:hover {
-        background-color: rgb(75, 72, 72);
-    }
+    width: 0;
 }
 
 section {

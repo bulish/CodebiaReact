@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import gsap from 'gsap';
+import { LocomotiveScrollProvider } from 'react-locomotive-scroll';
 
 import Menu from './components/menu/menu';
 import Title from './components/title/Title';
@@ -10,10 +11,13 @@ import WorkWithUs from './components/workWithUs/workWithUs';
 import Text from './components/text/text';
 
 import './main.scss';
+import './components/base.css';
 
 import data from './data';
 
 function App() {
+	const containerRef = useRef(null);
+
 	const [cards, setCards] = useState(data());
 	const [menuStatus, setMenuStatus] = useState(false);
 	const [menu, setMenu] = useState(false);
@@ -39,14 +43,26 @@ function App() {
 		setMenu(!menu);
 	};
 	return (
-		<div className="App">
-			<Menu menuFunction={menuFunction}/>
-			<FixedDiv menuStatus={menuStatus} setMenuStatus={setMenuStatus} menuFunction={menuFunction}/>
-			<Title />
-			<AboutUs />
-			<WhatWeDo cards={cards} setCards={setCards} />
-			<WorkWithUs />
-			<Text />
+		<div>
+			<LocomotiveScrollProvider
+				options={{ smooth: true }}
+				watch={['Virtual Scroll']}
+				containerRef={containerRef}
+			>
+				<div ref={containerRef} data-scroll-container>
+					<Menu menuFunction={menuFunction} />
+					<FixedDiv
+						menuStatus={menuStatus}
+						setMenuStatus={setMenuStatus}
+						menuFunction={menuFunction}
+					/>
+					<Title />
+					<AboutUs />
+					<WhatWeDo cards={cards} setCards={setCards} />
+					<WorkWithUs />
+					<Text />
+				</div>
+			</LocomotiveScrollProvider>
 		</div>
 	);
 }

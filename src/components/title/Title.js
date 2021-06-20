@@ -43,20 +43,28 @@ function Title(){
 	};
 
 	return (
-		<div id="title">
+		<div id="title" data-scroll-section>
 			<div className="title__container">
 				<div className="box1">
-					<div className="box1__text">
+					<div className="box1__text" data-scroll data-scroll-speed="5">
 						<div className="box1__title">
 							<span>CODE</span> WITH US <br /> IN <span>CODEBIA</span>
 						</div>
-						<div className="box1__btn" onMouseEnter={mouseEnterBtn} onMouseLeave={mouseLeaveBtn}>
+						<div
+							className="box1__btn"
+							onMouseEnter={mouseEnterBtn}
+							onMouseLeave={mouseLeaveBtn}
+						>
 							<a href="#aboutUs">MORE INFO</a>
 							<div className="box1__btn__hover"></div>
 						</div>
 					</div>
 				</div>
-				<div className="box2" onMouseEnter={mouseEnterBox2} onMouseLeave={mouseLeaveBox2}>
+				<div
+					className="box2"
+					onMouseEnter={mouseEnterBox2}
+					onMouseLeave={mouseLeaveBox2}
+				>
 					<div className="box2__text">
 						<a href="#aboutUs">
 							About Us <div className="box2__text__arrow">&rarr;</div>
@@ -64,7 +72,11 @@ function Title(){
 					</div>
 					<div className="box2__yellowDiv"></div>
 				</div>
-				<div className="box3"  onMouseEnter={mouseEnterBox3} onMouseLeave={mouseLeaveBox3}>
+				<div
+					className="box3"
+					onMouseEnter={mouseEnterBox3}
+					onMouseLeave={mouseLeaveBox3}
+				>
 					<div className="box3__text">
 						<a href="#text">
 							Contact <div className="box3__text__arrow">&rarr;</div>

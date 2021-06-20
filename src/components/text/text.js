@@ -10,13 +10,16 @@ function Text() {
 		gsap.to('.text__btn__div', { x: '0%' });
 	};
 	return (
-		<section id="text">
+		<section id="text" data-scroll-section>
 			<div className="text__textContainer">
 				<div className="subtitle">Codebia</div>
 				<div className="basicText">
-					Let’s work together to build
-					<br />
-					something great.
+					<p data-scroll data-scroll-speed="1" data-scroll-direction="horizontal">
+						Let’s work together to build
+					</p>
+					<p data-scroll data-scroll-speed="-1" data-scroll-direction="horizontal">
+						something great.
+					</p>
 				</div>
 				<div
 					className="text__btn"

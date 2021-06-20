@@ -2,16 +2,6 @@ import React from "react";
 import gsap from "gsap";
 
 function Title(){
-
-	const onloadFunction = () => {
-		gsap.to('.box1__text', {
-			duration: 3.5,
-			ease: 'sine.out',
-			'--mask': 'linear-gradient(-45deg, transparent -50%, black 0%)',
-		});
-	}
-	window.addEventListener('load', onloadFunction);
-
 	// title btn
 
 	const mouseEnterBtn = () => {

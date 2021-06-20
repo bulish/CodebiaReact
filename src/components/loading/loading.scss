@@ -4,10 +4,12 @@ $orange: #FFC03F;
     display: none;
     width: 100vw;
     height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    text-align: center;
+    z-index: 999;
+    position: absolute;
     h1 {
         font-family: 'Cabin', sans-serif;
         font-size: $title__fontSize;
@@ -15,7 +17,8 @@ $orange: #FFC03F;
     }
     .line {
         background-color: $orange;
-        width: 80px;
+        width: 100px;
         height: 5px;
+        margin: 0 auto;
     }
 }

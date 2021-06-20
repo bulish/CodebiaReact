@@ -9,7 +9,6 @@ import AboutUs from './components/aboutUs/aboutUs';
 import WhatWeDo from './components/whatWeDo/whatWeDo';
 import WorkWithUs from './components/workWithUs/workWithUs';
 import Text from './components/text/text';
-import Loading from "./components/loading/loading";
 
 import './main.scss';
 import './components/base.css';
@@ -17,14 +16,14 @@ import './components/base.css';
 import data from './data';
 
 function App() {
-	const loading = React.createRef();
-	const content = React.createRef();
 	const containerRef = useRef(null);
+	const loadingRef = useRef();
+	const contentRef = useRef();
 	const [cards, setCards] = useState(data());
 	const [menuStatus, setMenuStatus] = useState(false);
 	const [menu, setMenu] = useState(false);
 	const menuFunction = () => {
-		var tl = gsap.timeline({ paused: true });
+		let tl = gsap.timeline({ paused: true });
 		if(!menu){
 			tl.to('.firstSpan', {rotation: 45, ease: 'linear', duration: 0.25})
 			tl.to('.secondSpan', { opacity: 0, ease: 'linear', duration: 0.25 }, '<');
@@ -44,30 +43,43 @@ function App() {
 		tl.play();
 		setMenu(!menu);
 	};
-
-	// const loadingFunction = () => {
-	// 	let tl = gsap.timeline();
-	// 	tl.fromTo(
-	// 		'.line',
-	// 		{ x: -80, duration: 1.2 },
-	// 		{ x: 80, repeat: 3, yoyo: true, duration: 1.2 },
-	// 	);
-	// 	tl.fromTo(
-	// 		'.loading',
-	// 		{ opacity: 1, display: 'block' },
-	// 		{ opacity: 0, display: 'none' },
-	// 	);
-	// 	tl.fromTo(
-	// 		'.content',
-	// 		{ opacity: 0, display: 'none' },
-	// 		{ opacity: 1, display: 'block' },
-	// 	);
-	// }
-	// window.addEventListener("onload", loadingFunction());
+	useEffect(() => {
+		let timeline = gsap.timeline();
+		timeline.fromTo(
+			[loadingRef.current.lastChild],
+			{ x: -60, duration: 1.2, repeat: 3, yoyo: true },
+			{ x: 60, repeat: 3, yoyo: true, duration: 1.2 },
+			);
+		timeline.to([loadingRef.current.lastChild], {
+				x: 0,
+				duration: 0.6,
+			});
+		timeline.to(
+			[loadingRef.current],
+			{ autoAlpha: 0, opacity: 0, visibility:'hidden', duration: 1.2},
+		);
+		timeline.fromTo(
+			[contentRef.current],
+			{ autoAlpha: 1, opacity: 0, display: 'none', duration: 1.2 },
+			{ opacity: 1, display: 'block', duration: 1.2 },
+		'-=0.5');
+		timeline.to([loadingRef.current], {x: '-2000vw'});
+		timeline.to(
+			'.box1__text',1,
+			{
+				duration: 3.5,
+				ease: 'sine.out',
+				'--mask': 'linear-gradient(-45deg, transparent -50%, black 0%)',
+			}, '-=0.5'
+		);
+	}, []);
 	return (
 		<div>
-			{/* <Loading/> */}
-			<div className="content">
+			<div className="loading" ref={loadingRef}>
+				<h1>Loading</h1>
+				<div className="line"></div>
+			</div>
+			<div className="content" ref={contentRef}>
 				<LocomotiveScrollProvider
 					options={{ smooth: true }}
 					watch={['Virtual Scroll']}

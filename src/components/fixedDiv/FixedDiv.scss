@@ -14,6 +14,7 @@ $titleBlack: rgb(20, 20, 20);
     .fixed__div__menu{
         position: fixed;
         padding-top: 2rem;
+        cursor: pointer;
         input{
             display: block;
             width: 40px;
@@ -21,7 +22,6 @@ $titleBlack: rgb(20, 20, 20);
             position: absolute;
             top: -7px;
             left: -5px;
-            cursor: pointer;
             opacity: 0;
             z-index: 2;
             -webkit-touch-callout: none;
@@ -34,7 +34,7 @@ $titleBlack: rgb(20, 20, 20);
                 position: relative;
                 background: #FFC03F;
                 border-radius: 3px;
-                z-index: 1;
+                z-index: 999999;
                 transform-origin: 4px 0px;
                 transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0), background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),opacity 0.55s ease;
                 &:first-child{
